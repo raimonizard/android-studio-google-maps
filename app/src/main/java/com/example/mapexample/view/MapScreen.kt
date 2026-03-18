@@ -1,4 +1,4 @@
-package com.example.mapexample
+package com.example.mapexample.view
 
 import android.annotation.SuppressLint
 import android.location.Location
@@ -18,6 +18,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
+import com.example.mapexample.MainActivity
+import com.example.mapexample.viewmodel.MapViewModel
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng

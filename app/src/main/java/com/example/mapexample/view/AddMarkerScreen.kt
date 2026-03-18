@@ -1,4 +1,4 @@
-package com.example.mapexample
+package com.example.mapexample.view
 
 import android.util.Log
 import androidx.compose.foundation.layout.Column
@@ -14,6 +14,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.mapexample.viewmodel.MapViewModel
+import com.example.mapexample.model.MyMarker
 import com.google.android.gms.maps.model.LatLng
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -42,6 +44,5 @@ fun AddMarkerScreen(myViewModel: MapViewModel, coordinates: LatLng, onDismiss: (
                 Text(text = "Add Marker")
             }
         }
-
     }
 }

@@ -3,18 +3,18 @@ package com.example.mapexample
 import android.Manifest
 import android.os.Bundle
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.Modifier
 import com.example.mapexample.ui.theme.MapExampleTheme
+import com.example.mapexample.view.MapScreen
+import com.example.mapexample.view.ShowMap
+import com.example.mapexample.viewmodel.MapViewModel
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import com.google.accompanist.permissions.isGranted
 import com.google.accompanist.permissions.rememberPermissionState
@@ -39,7 +39,7 @@ class MainActivity : ComponentActivity() {
                         permissionState.launchPermissionRequest()
                     }
                     if(permissionState.status.isGranted){
-                        ShowMap(myViewModel)
+                        MapScreen(myViewModel)
                     }
                     else{
                         Text("Need permission")
